@@ -100,6 +100,34 @@ const CustomEditors =  ({getdata,selected}) => {
          ,
         "text" : "Delete",
         "type" : 'delete'
+    },{
+
+        "iconwhite" : <svg xmlns="http://www.w3.org/2000/svg" width="50" height="20" viewBox="0 0 16 16" fill="none">
+        <g clip-path="url(#clip0_2062_568)">
+          <path d="M4.99967 7.99992L6.99967 9.99992L10.9997 5.99992M14.6663 7.99992C14.6663 11.6818 11.6816 14.6666 7.99967 14.6666C4.31778 14.6666 1.33301 11.6818 1.33301 7.99992C1.33301 4.31802 4.31778 1.33325 7.99967 1.33325C11.6816 1.33325 14.6663 4.31802 14.6663 7.99992Z" stroke="#F5F5F5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <defs>
+          <clipPath id="clip0_2062_568">
+            <rect width="16" height="16" fill="white"/>
+          </clipPath>
+        </defs>
+      </svg>
+        
+        ,
+         "icongreen" :<svg xmlns="http://www.w3.org/2000/svg"  width="50" height="20"  viewBox="0 0 16 16" fill="none">
+         <g clip-path="url(#clip0_2062_568)">
+           <path d="M4.99967 7.99992L6.99967 9.99992L10.9997 5.99992M14.6663 7.99992C14.6663 11.6818 11.6816 14.6666 7.99967 14.6666C4.31778 14.6666 1.33301 11.6818 1.33301 7.99992C1.33301 4.31802 4.31778 1.33325 7.99967 1.33325C11.6816 1.33325 14.6663 4.31802 14.6663 7.99992Z" stroke="#82D882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+         </g>
+         <defs>
+           <clipPath id="clip0_2062_568">
+             <rect width="16" height="16" fill="white"/>
+           </clipPath>
+         </defs>
+       </svg>
+         
+         ,
+        "text" : "Sale",
+        "type" : 'sale'
     }
 
     ]);
@@ -116,8 +144,8 @@ const CustomEditors =  ({getdata,selected}) => {
 
     return (
         <div
-            style={{borderRadius:global_css.card_border_radius,border:'1px solid #595959',width:'100%',height:"100%",backgroundColor:global_css.primary_card_bg}}>
-            <div style={{display:'flex',justifyContent:'center',gap:'5px' ,alignItems:'flex-start',flexDirection:'column',width:'100%' ,height:'100%',padding:'8px 14px',transition:'all 300ms'}}>
+            style={{borderRadius:global_css.card_border_radius,border:'1px solid #595959',width:'100%',height:"100%",backgroundColor:global_css.primary_card_bg,}}>
+            <div style={{display:'flex',justifyContent:'center',gap:'3px' ,alignItems:'flex-start',flexDirection:'column',width:'100%' ,height:'100%',padding:'8px 14px',transition:'all 300ms',backgroundColor:global_css.primary_card_bg,}}>
 
                 {
                 selected.length >0?

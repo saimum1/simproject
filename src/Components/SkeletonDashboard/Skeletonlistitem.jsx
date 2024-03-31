@@ -14,6 +14,8 @@ import usersquareicon from '../../assets/static/user-square.svg'
 import usersquareicongreen from '../../assets/static/user-squaregreen.svg'
 import offercentericongreen from '../../assets/static/offercentergreen.svg'
 import offercentericon from '../../assets/static/offercenter.svg'
+import simsell from '../../assets/static/sellsim.svg'
+import simsellwhite from '../../assets/static/sellsimwhite.svg'
 
 export const dataset=[
     {
@@ -58,6 +60,13 @@ export const dataset=[
                                         'menu':[],
                                         'code':6
                                             }, 
+                                            {
+                                                'img':simsellwhite,
+                                                'imgsec':simsell,
+                                                'name':'Sell sim card',
+                                                'menu':['Sim list','Activation'],
+                                                'code':7
+                                                    }, 
                                     {
                                         'img':settingicon,
                                         'imgsec':settingicongreen,

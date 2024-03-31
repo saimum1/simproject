@@ -18,6 +18,7 @@ import AgentListOperation from "../Users/AgentList/AgentListOperation.jsx";
 import AgentRequestList from "../Users/AgentRequest/AgentRequestList.jsx";
 import UserList from '../Users/UserList/UserList.jsx'
 import OfferCenter from '../OfferCenter/OfferCenter.jsx'
+import SimSell from '../SimSell/SimList/SimSell.jsx'
 const Dashboardskeleton = () => {
 
     const {user, token} = useAuth();
@@ -120,6 +121,17 @@ const Dashboardskeleton = () => {
         case 6:
         return <OfferCenter />
 
+
+        case 7:
+
+            if(showcomponentouter === 'Sim list'){
+              return <SimSell /> ;
+            }else if(showcomponentouter === 'Activation'){
+              return ''
+            } else{
+                return '';
+            }
+
       default:
         return null;
     }
@@ -160,7 +172,7 @@ const Dashboardskeleton = () => {
                                         >
                                           <span><img src={ (hoveredIndex === index || selectedIndex === index) ? n.imgsec : n.img}  style={{width:'100%',height:'100%'}}/></span>                         
                                         <span style={{color: (hoveredIndex === index || selectedIndex === index) ? '#27CF7A':global_css.primary_txt_color ,fontFamily:'Lexend',fontWeight:'400',fontSize:'100%',lineHeight:'24px'}}>{n.name}</span>
-                                        {n.code ===1 || n.code ===4 ?
+                                        {n.code ===1 || n.code ===4 || n.code === 7?
                                       
                                         <FontAwesomeIcon rotation={selectedIndex === index? 180:''} icon={faAngleUp}  style={{color:(hoveredIndex === index || selectedIndex === index)?'#27CF7A':'white',transition:'all 300ms'}}/>
                                         :''}
