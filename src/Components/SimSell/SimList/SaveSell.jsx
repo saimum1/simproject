@@ -47,6 +47,7 @@ const SaveSell = ({isOpen, onClose ,data ,action ,simForEdit, GetSimList}) => {
     const [pageview, setpageview] = useState(true)
     const [isPageChanging, setIsPageChanging] = useState(false)
 
+   
 
 
 
@@ -155,10 +156,12 @@ const SaveSell = ({isOpen, onClose ,data ,action ,simForEdit, GetSimList}) => {
     const sendataback=()=>{
         setstatusx((prev) => (prev === 0 ? prev : prev - 1));
 
+       
     }
     const sendata=()=>{
-
         setstatusx((prev) => (prev === 3 ? prev : prev + 1));
+
+    
   
         // onClose()
         //         let da={
@@ -234,6 +237,14 @@ const SaveSell = ({isOpen, onClose ,data ,action ,simForEdit, GetSimList}) => {
     }, [action, simForEdit])
 
 
+
+
+
+
+
+
+
+  
     return (
         <div >
           {showpopoup &&  <Popnotification  msg={showpopoupmsg} showpopoup={showpopoup} status={showpopoupstatus} /> } 
@@ -286,12 +297,15 @@ const SaveSell = ({isOpen, onClose ,data ,action ,simForEdit, GetSimList}) => {
                             </div>
 
 
-                            <div className="flex flex-col items-center gap-4 justify-between" style={{backgroundColor:'',width:'100%',transition:'all 900ms'}}>
+                            <div className="flex  items-center " style={{backgroundColor:'',width:'100%',transition:'all 900ms'}}>
 
-                            <div style={{flex:'84%',height:'100%',width:'100%',backgroundColor:'',display:'flex',justifyContent:'center',alignItems:'flex-start',transition:'all 300ms'}} >
-                                    <div className={`page-transition ${isPageChanging ? 'changing' : ''}`} id='showcomp' style={{height:'98.5%',width:'99%',display:'flex',justifyContent:'center',alignItems:'center' ,transition:'all 300ms',borderRadius:global_css.card_border_radius}}>
+                            <div style={{height:'100%',width:'100%',backgroundColor:'',display:'flex',justifyContent:'center',alignItems:'flex-start',transition:'all 300ms'}} >
+                                    <div className={`page-transition ${isPageChanging ? 'changing' : ''}`} id='showcomp' style={{height:'100%',width:'100%',display:'flex',justifyContent:'center',alignItems:'center' ,transition:'all 300ms',borderRadius:global_css.card_border_radius}}>
                                         { pageview && renderComponent()}
                                     </div>
+
+
+
                                 </div>
 
                             </div>
@@ -304,8 +318,14 @@ const SaveSell = ({isOpen, onClose ,data ,action ,simForEdit, GetSimList}) => {
                     <Button colorScheme='white' variant='outline' onClick={onClose}>reset</Button>
 
                         <div  style={{display:'flex',gap:'1rem',justifyContent:'flex-end',width:'100%',backgroundColor:''}}>
-                        <Button colorScheme='white' variant='outline' onClick={()=>{sendataback();settransition();} }>Back</Button>
-                        <Button onClick={()=>{sendata();settransition();} }  style={{background : "#27CF7A", color: 'white',width:'30%'}} >
+                        <Button colorScheme='white' variant='outline'
+                         onClick={()=>{sendataback();settransition();} }
+                         >Back</Button>
+                        <Button
+                        
+                        onClick={()=>{sendata();settransition();} } 
+                        
+                        style={{background : "#27CF7A", color: 'white',width:'30%'}} >
                             Save next
                         </Button>
                         </div>
@@ -326,6 +346,11 @@ const SaveSell = ({isOpen, onClose ,data ,action ,simForEdit, GetSimList}) => {
     opacity: 0;
     transition: opacity 200ms ease-in-out;
   }
+
+
+
+
+
     `}
 </style>
         </div>
